@@ -32,7 +32,7 @@ thumbs = {}
 thumb_array = []
 
 for i in range(len(collections)):
-    print(i)
+    print(str(i+1)+"/"+str(len(collections)))
     collection_url = collections[i]["@id"]
 
     print(collection_url)
@@ -45,7 +45,10 @@ for i in range(len(collections)):
 
     #################
 
-    for manifest in manifests:
+    for j in range(len(manifests)):
+        manifest = manifests[j]
+
+        print(str(j+1)+"/"+str(len(manifests)))
 
         thumbnail = manifest["thumbnail"]
         if thumbnail not in thumb_array:
